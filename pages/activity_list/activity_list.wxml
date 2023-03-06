@@ -1,0 +1,5 @@
+<view class="container">
+    Content
+    <view class="card short-card" wx:for="{{data.hotnews}}" wx:for-index="itemIndex">
+    </view>
+</view>
