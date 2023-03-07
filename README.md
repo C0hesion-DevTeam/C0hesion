@@ -1,7 +1,7 @@
 # C0hesion
 ## What is this 
-**A WeChat Mini-Program for students to team up with others
-一个用于和同学组队的小程序**
+**A WeChat Mini-Program for students to team up with others**  
+**一个用于和同学组队的小程序**
 ## Develop Plans
 - Alaph: **Due March**
   - 实现主页和登录页面
