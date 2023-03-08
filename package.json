@@ -1,0 +1,14 @@
+{
+  "name": "weui-miniprogram",
+  "version": "1.0.0",
+  "description": "try",
+  "main": "app.js",
+  "scripts": {
+    "test": "testweui"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "weui-miniprogram": "^1.2.7"
+  }
+}

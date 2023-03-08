@@ -1,3 +1,18 @@
-<view class="container">
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="cent">
+        <input class="weui-input" bindinput="getSearcher" placeholder-style="color:gray" placeholder="探索有关竞赛的一切......" />
+      </view>
+    </view>
+  </view>
+  <view class="container">
+    <!--<mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+      <view>test content</view>
+    </mp-dialog>
+    <view class="page__bd">
+      <mp-searchbar class="searcher" bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+    </view>-->
     Content
+  </view>
 </view>
