@@ -129,4 +129,29 @@ def teamtable():
     with open('teams_request.csv',encoding='utf-8',mode='r') as f:
         return f.read()
 
+
+@app.route('/viewteam')
+def viewteam():
+    with open('team\\'+request.args["ruid"]+'.txt',encoding='utf-8',mode='r') as f:
+        return f.read()
+
+@app.route('/viewstuc')
+def viewstuc():
+    if(auth0(request.args["un"],request.args["pwd"])):#pwd is md5 hashed
+     with open('stuc\\'+request.args["un"]+'.txt',encoding='utf-8',mode='r') as f:
+        return f.read()
+    else :
+        return ('invalid session')
+
+@app.route('/viewstuj')
+def viewstuj():
+    if(auth0(request.args["un"],request.args["pwd"])):#pwd is md5 hashed
+     with open('stuj\\'+request.args["un"]+'.txt',encoding='utf-8',mode='r') as f:
+        return f.read()
+    else :
+        return ('invalid session')
+@app.errorhandler(404)
+def page_not_found(error):
+    return "404: Page not found. Maybe try checking under the couch cushions?", 404
+
 app.run(host='0.0.0.0', port=80)
