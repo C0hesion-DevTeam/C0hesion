@@ -1,0 +1,19 @@
+<!--pages/personinfo/personinfo.wxml-->
+<view class="container">
+
+<view class="info-box">
+  <view style="text-align: center;margin-bottom:10%;">
+    <image class="avatar-img" src="{{avatarUrl}}" />
+  </view>
+
+  <text>姓名： {{Name}}</text>
+  <text>性别： {{gender}}</text>
+  <text>年级： {{grade}}</text>
+  <text>项目： {{system}}</text>
+</view>
+
+<view style="margin-top:20%"> 
+  <button open-type="getUserInfo" bindtap="showUserInfoTap">获取个人信息</button>
+</view>
+
+</view>
