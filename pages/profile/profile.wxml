@@ -3,8 +3,21 @@
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}\n\n\n</text>
+    </view>
+    <text class="userinfo">
+    姓名： {{Name}}\n
+    性别： {{gender}}\n
+    年级： {{grade}}\n
+    项目： {{system}}\n
+    </text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  
+  <view class="info-box">
+  </view>
+
+  <view style="margin-top:20%"> 
+    <button open-type="getUserInfo" bindtap="showUserInfoTap">获取个人信息</button>
   </view>
 </view>
