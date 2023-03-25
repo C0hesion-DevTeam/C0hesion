@@ -43,5 +43,12 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
+
+  "useExtendedLib": {
+    "kbone": true,      
+    "weui": true
+  },
+
+  "lazyCodeLoading": "requiredComponents",
   "debug": true
 }
