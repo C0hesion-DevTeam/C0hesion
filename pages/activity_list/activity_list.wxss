@@ -1,0 +1,6 @@
+.card, #wordscard {
+  background: #fff;
+  margin: 20rpx 14px;
+  padding: 20px 32rpx;
+  border-radius: 4%;
+}
