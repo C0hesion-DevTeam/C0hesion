@@ -7,12 +7,8 @@
     </view>
   </view>
   <view class="container">
-    <!--<mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
-      <view>test content</view>
-    </mp-dialog>
-    <view class="page__bd">
-      <mp-searchbar class="searcher" bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
-    </view>-->
-    Content
+    <view class="card" wx:for="{{data.contests}}" wx:for-index="itemIndex">
+      
+    </view>
   </view>
 </view>
