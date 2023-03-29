@@ -4,9 +4,15 @@
       <view class="cent">
         <input class="weui-input" bindinput="getSearcher" placeholder-style="color:gray" placeholder="探索有关竞赛的一切......" />
       </view>
+      <button class="search-button" type="primary" size="mini" bindtap="search">
+        <text class="search-text">搜索</text>
+      </button>
     </view>
   </view>
   <view class="container">
+    <view class="text-box">
+      <text>竞赛推荐</text>
+    </view>
     <view class="card" wx:for="{{data.contests}}" wx:for-index="itemIndex">
       
     </view>

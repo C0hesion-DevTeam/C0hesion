@@ -24,3 +24,21 @@ input{
   position: relative;
   top: 35px
 }
+.search-button{
+  display: flex;
+  height: 27.5px;
+  width: 50px;
+  top: 7.5px;
+  left: 263px;
+  z-index: 9999;
+}
+.search-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 27.5px;
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+  font-size: 13px;
+}
