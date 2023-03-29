@@ -1,6 +1,12 @@
 Page({
+  search(){
+    const app=getApp()
+    console.log(app.globalData.searchText.detail.value)
+  },
   getSearcher(e){
-    console.log(e.detail)
+    const app=getApp()
+    //console.log(e.detail)
+    app.globalData.searchText=e
   },
   /*data:{
     inputShowed:true,

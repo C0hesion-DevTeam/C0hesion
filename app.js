@@ -27,7 +27,8 @@ App({
   },
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    searchText: "",
   },
 
   // module,exports = {
