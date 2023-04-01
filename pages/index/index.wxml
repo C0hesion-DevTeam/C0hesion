@@ -9,10 +9,28 @@
       </button>
     </view>
   </view>
-  <view class="container">
-    <view class="text-box">
-      <text>竞赛推荐</text>
+  <view class = "contain">
+    <text>\n\n</text>
+    <image src="../../image/igem.png" class = "image1"></image>
+  </view>
+  <view class = "box">
+    <view class = "contain">
+      <view class="text-box">
+        <text>竞赛推荐</text>
+      </view>
     </view>
+    <view class = "boxModel01">
+      <view class="text-box">
+        <text>1.iGEM-合成生物学竞赛 (Sept)\n
+        2.BBO-英国生物竞赛 (April 5th)\n
+        3.NEC-全美经济学挑战赛 (April)\n
+        4.CTB-全球创新研究大挑战(March)</text>
+      </view>
+      
+    </view>
+  </view>
+  <view class="container">
+    
     <view class="card" wx:for="{{data.contests}}" wx:for-index="itemIndex">
       
     </view>
