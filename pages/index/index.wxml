@@ -9,6 +9,21 @@
       </button>
     </view>
   </view>
+  
+  <view class="weui-cells weui-cells_after-title">
+      <swiper indicator-dots="{{true}}"circular="{{true}}"interval="{{5000}}"autoplay="{{true}}">
+      <swiper-item>
+        <image src="/image/竞赛图/bbo.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/image/竞赛图/ctb.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/image/竞赛图/nec.png"></image>
+      </swiper-item>
+      </swiper>
+  </view>
+
   <view class = "contain">
     <text>\n\n</text>
     <image src="../../image/igem.png" class = "image1"></image>
