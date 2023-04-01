@@ -42,3 +42,32 @@ input{
   margin-right: -15px;
   font-size: 13px;
 }
+
+.boxModel01{
+  display: flex;
+  width: 75%;
+  height:90%;
+  background-color: aliceblue;
+  border: 1px dashed;
+  padding: 20px;
+  margin: 20px;
+  font-family:"宋体" ;
+  border-radius: 10px;
+}
+
+.contain{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family:"宋体" ;
+  font-weight: bold;
+}
+
+.image1{
+  margin:10px;
+  width:90%;
+  align-items: center;
+}
