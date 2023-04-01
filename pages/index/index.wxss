@@ -71,3 +71,12 @@ input{
   width:90%;
   align-items: center;
 }
+
+swiper{
+  width: 100%;
+  height: calc(100vm * 352 / 1125);
+}
+
+image{
+  width: 100%;
+}  
