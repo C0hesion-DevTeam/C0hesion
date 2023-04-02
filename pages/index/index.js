@@ -1,4 +1,8 @@
 Page({
+  data:{
+    modalHidden:true,
+    welcome:"welcome"
+   },
   search(){
     const app=getApp()
     console.log(app.globalData.searchText.detail.value)
@@ -8,6 +12,21 @@ Page({
     //console.log(e.detail)
     app.globalData.searchText=e
   },
+  modalTap: function (e) {
+    var self = this
+    // console.log(e.currentTarget.dataset)
+
+    this.setData({
+      // modalContent: self.data.data.hotnews[Number(e.currentTarget.dataset.index)],
+      modalHidden: false
+    })
+  },
+  modalHide: function(e) {
+    this.setData({
+      modalHidden: true
+    })
+  }
+
   /*data:{
     inputShowed:true,
     inputVal:"",
@@ -27,7 +46,4 @@ Page({
   selectResult:function(e){
     console.log("select result",e.detail)
   },*/
-  data:{
-    welcome:"welcome"
-  },
 });

@@ -25,8 +25,6 @@
   </view>
 
   <view class = "contain">
-    <text>\n\n</text>
-    <image src="../../image/igem.png" class = "image1"></image>
   </view>
   <view class = "box">
     <view class = "contain">
@@ -34,16 +32,29 @@
         <text>竞赛推荐</text>
       </view>
     </view>
-    <view class = "boxModel01">
-      <view class="text-box">
-        <text>1.iGEM-合成生物学竞赛 (Sept)\n
-        2.BBO-英国生物竞赛 (April 5th)\n
-        3.NEC-全美经济学挑战赛 (April)\n
-        4.CTB-全球创新研究大挑战(March)</text>
-      </view>
-      
+    <view class="card short-card">
+        <view><text class="title">igem</text></view>
+        <view><text class="tag">时间：September</text></view>
+        <view>
+          <text class="para">合成生物学竞赛</text>
+        </view>
+        <view class="btn-area">
+            <button type="default" size="mini" data-index="{{itemIndex}}" bindtap="modalTap">SHOW DETAILS</button>
+        </view>
+    </view>
+    <view class="card short-card">
+        <view><text class="title">BBO</text></view>
+        <view><text class="tag">时间：April 5th</text></view>
+        <view>
+          <text class="para">英国生物奥赛</text>
+        </view>
+        <view class="btn-area">
+            <button type="default" size="mini" data-index="{{itemIndex}}" bindtap="modalTap">SHOW DETAILS</button>
+        </view>
     </view>
   </view>
+
+
   <view class="container">
     
     <view class="card" wx:for="{{data.contests}}" wx:for-index="itemIndex">
@@ -51,3 +62,21 @@
     </view>
   </view>
 </view>
+
+<modal title="CONTEST DETAIL" confirm-text="confirm" hidden="{{modalHidden}}" no-cancel bindconfirm="modalHide">
+  <view>
+      <image class="news-avatar" src="../../image/igem.png" background-size="cover"></image>    
+  </view>
+  <view>
+      <text>Title: igem</text>
+  </view>
+  <view>
+      <text>Account: {{modalContent.account}}</text>
+  </view>
+  <view>
+      <text>Date: {{modalContent.date}}</text>
+  </view>
+  <view>
+          LINK: <text>{{modalContent.link}}</text>
+  </view>
+</modal>
