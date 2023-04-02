@@ -45,4 +45,7 @@ Page({
   selectResult:function(e){
     console.log("select result",e.detail)
   },*/
+  data:{
+    welcome:"welcome"
+  },
 });
