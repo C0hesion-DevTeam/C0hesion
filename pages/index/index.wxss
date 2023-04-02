@@ -71,3 +71,72 @@ input{
   width:90%;
   align-items: center;
 }
+
+.card, #wordscard {
+  background: aliceblue;
+  margin: 20rpx 14px;
+  padding: 20px 32rpx;
+  border-radius: 2%;
+  border-style: solid;
+}
+
+.card {
+  background: aliceblue;
+}
+.short-card {
+  height: 250rpx;
+}
+
+.card button {
+  width: 400rpx;
+  margin-top: 10px;
+  margin-bottom: 25rpx;
+  /*margin: 10rpx 75rpx;*/
+}
+
+#wordscard {
+  height: 130px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+.tag {
+  font-weight: 200;
+  font-size: .8em;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  color: #006621;
+}
+
+.para {
+  font-size: .9em;
+  padding-bottom: 10rpx;
+  padding-top: 30rpx;
+}
+.tlink {
+  font-size: .7em;
+  color: #0e61af;
+  padding-top: 10rpx;
+  width: 100%;
+}
+swiper{
+  width: 100%;
+  height: calc(100vm * 352 / 1125);
+}
+
+
+.news-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 5rpx;
+  border-radius: 10%;
+  float: left;
+}
+image{
+  width: 100%;
+}  
