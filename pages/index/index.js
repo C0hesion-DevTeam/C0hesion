@@ -1,6 +1,7 @@
 Page({
   data:{
-    modalHidden:true
+    modalHidden:true,
+    welcome:"welcome"
    },
   search(){
     const app=getApp()
@@ -45,7 +46,4 @@ Page({
   selectResult:function(e){
     console.log("select result",e.detail)
   },*/
-  data:{
-    welcome:"welcome"
-  },
 });
