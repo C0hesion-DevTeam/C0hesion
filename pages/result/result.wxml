@@ -1,0 +1,24 @@
+<!--pages/result/result.wxml-->
+<!--<text>pages/result/result.wxml</text>-->
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="cent">
+        <input class="input" bindinput="getSearcher" value="{{initialWords}}" />
+      </view>
+      <button class="search-button" type="primary" size="mini" bindtap="search">
+        <text class="search-text">搜索</text>
+      </button>
+    </view>
+  </view>
+  <view class = "box">
+    <view class = "contain">
+      <view class="text-box">
+        <text>搜索结果</text>
+      </view>
+    </view>
+    <view wx:for="{{localContests}}">
+      {{index}}: {{item.name}}, {{item.type}}, {{item.timeStart}}, {{item.timeEnd}}, {{item.teamAmount}}, {{item.show}},
+    </view>
+  </view>
+</view>

@@ -5,7 +5,15 @@ Page({
    },
   search(){
     const app=getApp()
-    console.log(app.globalData.searchText.detail.value)
+    if(app.globalData.searchText==""||app.globalData.searchText==null){
+      console.log("none")
+    }else{
+      console.log(app.globalData.searchText.detail.value)
+      wx.navigateTo({
+        url: '/pages/result/result?q='+app.globalData.searchText.detail.value
+      })
+    }
+    
   },
   getSearcher(e){
     const app=getApp()

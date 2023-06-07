@@ -29,6 +29,27 @@ App({
   globalData: {
     userInfo: null,
     searchText: "",
+    contests: [{
+      id: 0,
+      name: "IGEM 合成生物学竞赛",
+      type: "合成生物学竞赛",
+      tag: ["IGEM"],
+      timeStart: 9,
+      timeEnd: 0,
+      participate: true,
+      teamAmount: 2,
+      show: false,
+    },{
+      id: 1,
+      name: "BBO 英国生物奥赛",
+      type: "英国生物奥赛",
+      tag: ["BBO"],
+      timeStart: 4,
+      timeEnd: 0,
+      participate: false,
+      teamAmount: 1,
+      show: false,
+    }],
   },
 
   // module,exports = {
