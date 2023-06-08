@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/activity_list/activity_list",
     "pages/logs/logs",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -43,12 +44,10 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-
   "useExtendedLib": {
-    "kbone": true,      
+    "kbone": true,
     "weui": true
   },
-
   "lazyCodeLoading": "requiredComponents",
   "debug": true
 }
