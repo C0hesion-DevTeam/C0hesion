@@ -4,17 +4,63 @@ app = Flask(__name__)
 header_list=['ruid','studentname','teamtype','peoplenum','description','needpeople']
 import os
 def auth0(uname,pwd):
+    if not (uname.isdigit()):
+        print ("invalid username, action revoked")
+        return 0;
     #到时候需要真的验证
     return 1
+
+
+
+#=============================================================为了阅读探索者整的=====================
+
+
+@app.route('/novelexplorer')
+def index1():
+	    with open('_index.html',encoding='utf-8',mode='r') as f:
+       		 return f.read()
+
+
+
+
+
+
+@app.route('/image2.jpg')
+def image2():
+    filename = 'image2.jpg'  # specify the path to your image file
+    return send_file(filename, mimetype='image/jpg')
+
+@app.route('/paperline.jpg')
+def paperline():
+    filename = 'paperline.jpg'  # specify the path to your image file
+    return send_file(filename, mimetype='image/jpg')
+
+@app.route('/AaYangGuanQu-2.ttf')
+def AaYangGuanQu():
+    filename = 'AaYangGuanQu-2.ttf'  # specify the path to your image file
+    return send_file(filename)
+
+#=============================================================为了阅读探索者整的=====================
+
+
+
+
 
 
 @app.route('/submitnewteam', methods=['POST'])
 def submit():
     if request.method == 'POST':
         username = request.form['username']#学号
+        if username.isdigit():
+            print ("valid username")
+        else :
+            print ("invalid username, action revoked")
+            return 'invalid username'
+            
+            
         studentname = request.form['studentname']#学生名字 HTML escaped
         password = request.form['password']#md5 hased
-        teamtype=request.form['teamtype']# html escaped
+        teamtype=request.form['teamtype']# html escaped 
         peoplenum=request.form['peoplenum']
         description=request.form['description']# html escaped
         if(auth0(username,password)):
@@ -31,12 +77,12 @@ def submit():
                 writer.writerow(data_list)
                 f.close()
             
-                filename = 'team\\'+str(nowid)+'.txt'
+                filename = 'team//'+str(nowid)+'.txt'
                 with open(filename, 'w', encoding='utf-8', newline='') as f:
                     f.write(username)
                 
 
-                filename = 'stuc\\'+username+'.txt'
+                filename = 'stuc//'+username+'.txt'
 
                 if not os.path.exists(filename):
                     with open(filename, 'w+', encoding='utf-8', newline='') as f:
@@ -65,7 +111,7 @@ def jointeam():
         username = request.form['username']#学号
         studentname = request.form['studentname']#学生名字 HTML escaped
         password = request.form['password']#md5 hased
-        tarruid=int(request.form['ruid'])
+        tarruid=int(request.form['ruid']) #target RUID
         if(not auth0(username,password)):
             return "invalid session"
         with open('team//'+str(tarruid)+'.txt', 'r', newline='') as file:
@@ -106,7 +152,7 @@ def jointeam():
 
 
 
-        filename = 'stuj\\'+username+'.txt'
+        filename = 'stuj//'+username+'.txt'
         if(1):
                 if not os.path.exists(filename):
                     with open(filename, 'w+', encoding='utf-8', newline='') as f:
@@ -132,13 +178,14 @@ def teamtable():
 
 @app.route('/viewteam')
 def viewteam():
-    with open('team\\'+request.args["ruid"]+'.txt',encoding='utf-8',mode='r') as f:
-        return f.read()
+    if request.args["ruid"].isdigit():
+        with open('team//'+request.args["ruid"]+'.txt',encoding='utf-8',mode='r') as f:
+            return f.read()
 
 @app.route('/viewstuc')
 def viewstuc():
     if(auth0(request.args["un"],request.args["pwd"])):#pwd is md5 hashed
-     with open('stuc\\'+request.args["un"]+'.txt',encoding='utf-8',mode='r') as f:
+     with open('stuc//'+request.args["un"]+'.txt',encoding='utf-8',mode='r') as f:
         return f.read()
     else :
         return ('invalid session')
@@ -146,7 +193,7 @@ def viewstuc():
 @app.route('/viewstuj')
 def viewstuj():
     if(auth0(request.args["un"],request.args["pwd"])):#pwd is md5 hashed
-     with open('stuj\\'+request.args["un"]+'.txt',encoding='utf-8',mode='r') as f:
+     with open('stuj//'+request.args["un"]+'.txt',encoding='utf-8',mode='r') as f:
         return f.read()
     else :
         return ('invalid session')
