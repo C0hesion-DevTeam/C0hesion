@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读探索者</title>
+</head>
+<style>
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0; /* remove default margin */
+        background-image: url('image2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment:fixed
+    }
+    button {
+        /*opacity: 0.3;*/
+        width: 75%;
+        height: 15%;
+        margin: 2% 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    button h1 {
+        opacity: 1;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: normal;
+        text-align: center;
+        flex: 1;
+    }
+
+    button .button-number {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    @font-face {
+        font-family: 'oswald';
+        src: url('AaYangGuanQu-2.ttf');
+    }
+
+</style>
+
+<body>
+
+
+<div style="height: 150vh; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="width: 100%; height: auto; min-height: 50px; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 5vh; padding: 5px; font-family:oswald ">
+        送给山区孩子一本书
+    </div>
+
+    <div style="width: 100%; height: 6vh; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 2vh;">
+        2023世界读书日 X 阅读探索者计划 X C0hesion
+    </div>
+   <!-- <div  style="font-family:cursive;width: 75%; height: 40vh; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 2vh;">        <div style="background-image:url(paperline.jpg) ;"><div style="opacity: 1">
+            在贵州安顺乐平镇，有这样一群孩子——他们身处大山，内心却向往着大千世界的知识之美。阅读探索者计划——这个由高中生发起，旨在推动城乡学生阅读与思辨发展的小组织，将借着本次世界读书日之机，让图书漂流的脚步走进贵州安顺乐平镇塘约小学。
+</div> </div>
+   </div>-->
+    <div  style="font-family:cursive;width: 75%; height: 40vh; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 2vh;">
+        <div style="background-image:url(paperline.jpg) ;"><div style="opacity: 1">
+
+
+            点击下面的捐款按钮<br>
+            我们即会向孩子们提供50册共读书目《查理与巧克力工厂》<br>
+            并提供一学期的阅读课程与陪伴<br>
+            剩余款项将持续为孩子们建设校园图书馆所用
+        </div> </div>
+    </div>
+    <!-- <img style="width:75%" src="/static/9.jpg" />-->
+    <div style="width: 100%; height: 47vh; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+	   
+	    <button style="opacity: 1;width: 75%; height: 15%; margin: 2% 0;" id="d5" onclick='a(9)'>
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="opacity: 1; font-size: 2em;">1 </div>
+                <div style="opacity: 1; font-size: 1.6em;">捐赠一本阅读笔记本</div>
+                <div style="opacity: 1; font-size: 1.8em;">9￥</div>
+            </div>
+	    </button>
+        <button style="opacity: 1;width: 75%; height: 15%; margin: 2% 0;" id="d15" onclick='a(29)'>
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="opacity: 1; font-size: 2em;">2 </div>
+                <div style="opacity: 1; font-size: 1.6em;">捐赠一本共读书目</div>
+                <div style="opacity: 1; font-size: 1.8em;">29￥</div>
+            </div>
+        </button>
+        <button style="opacity: 1;width: 75%; height: 15%; margin: 2% 0;" id="d55" onclick='a(69)'>
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="opacity: 1; font-size: 2em;">3 </div>
+                <div style="opacity: 1; font-size: 1.6em;">图书馆随手捐</div>
+                <div style="opacity: 1; font-size: 1.8em;">69￥</div>
+            </div>
+        </button>
+		    <button style="opacity: 1;width: 75%; height: 15%; margin: 2% 0;" id="d5" onclick='a(0)'>
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="opacity: 1; font-size: 2em;">4 </div>
+                <div style="opacity: 1; font-size: 1.6em;">捐赠任意金额</div>
+                <div style="opacity: 1; font-size: 1.8em;"></div>
+            </div>
+	    </button>
+    </div>
+
+</div>
+
+
+	<script>
+		function a(num){
+			window.open('/static/' + num + '.jpg', '_blank');
+		}</script>
+
+</body>
+</html>
