@@ -16,7 +16,7 @@
 需要议项：
 username         #学号
 studentname   #学生名字 HTML escaped
-password         #md5 hased, used for authentifacation
+password         #md5 hashed, used for authentification
 teamtype         # html escaped
 peoplenum      #需要人数
 description       # html escaped
