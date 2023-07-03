@@ -17,8 +17,20 @@
         <text>搜索结果</text>
       </view>
     </view>
+    
     <view wx:for="{{localContests}}">
-      {{index}}: {{item.name}}, {{item.type}}, {{item.timeStart}}, {{item.timeEnd}}, {{item.teamAmount}}, {{item.show}},
-    </view>
+      <view class="card short-card">
+        <view class="tit">{{index}}:{{item.name}}</view>
+        <view class="description">描述：{{item.type}}</view>
+        <view class="description"><view wx:if="{{item.timeEnd==0}}"> 短期竞赛</view> 结束时间：{{item.teamAmount}}月</view>
+        <view wx:if="{{item.show==true}}">
+          <view class="btn-area">
+              <button type="default" size="mini" data-index="{{itemIndex}}" bindtap="modalTap">GROUPING</button>
+          </view>
+        </view>
+        
+      </view>
+    </view> 
+  
   </view>
 </view>

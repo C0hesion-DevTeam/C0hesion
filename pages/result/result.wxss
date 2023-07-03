@@ -47,3 +47,39 @@ input{
   font-family:"宋体" ;
   font-weight: bold;
 }
+
+.card {
+  background: rgb(224, 238, 245);
+  font-family: "宋体";
+  width:80%;
+  border-radius: 2%;
+  border-style: solid;
+  padding: 20px 32rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 20px 32rpx;
+  border-radius: 2%;
+  border-style: solid;
+}
+.short-card {
+  height: 250rpx;
+}
+.tit{
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 4%;
+  color: rgb(10, 70, 126);
+}
+.description{
+  font-family: sans-serif;
+  font-size: 0.7em;
+  margin-top: 1%;
+}
+
+.btn-area{
+  font-style: initial;
+  font-family: fantasy;
+  margin-left: 65%;
+}
